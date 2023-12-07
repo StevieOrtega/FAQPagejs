@@ -3,3 +3,58 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: blanchedalmond;
+}
+
+.container,
+.faq-content {
+  -webkit-box-shadow: -2px 0px 17px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 0px 17px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 0px 17px 3px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.container {
+  background-color: beige;
+  width: 1080px;
+  margin: auto;
+  padding: 100px;
+  margin-top: 100px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.faq-content {
+  position: relative;
+  background-color: blanchedalmond;
+  padding: 20px 25px;
+}
+
+.faq-query {
+  font-size: 22px;
+}
+.faq-query::before {
+  content: "+";
+  color: black;
+  position: absolute;
+  top: 15%;
+  right: 28px;
+  font-size: 30px;
+  transform: translateY(-20%);
+}
+
+.faq-answer {
+  /* display: none; */
+  font-size: 18px;
+  padding-top: 30px;
+}
