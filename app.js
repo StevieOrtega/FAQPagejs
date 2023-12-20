@@ -1,19 +1,28 @@
 const plusArray = document.getElementsByClassName("faq-query")
-const faqAns = document.getElementsByClassName('faq-answer')
+const faqs = document.getElementsByClassName('faq-answer')
 
-// Array.from(faqAns).forEach((faq, index) =>{
-// })
+Array.from(faqs).forEach((faq, index) => {
+    faq.classList.add(index + 1, "hidden")
+    
+     
+})
 
-// function openSesame() {
-  
-//   }
+function openFaqs(num){
+if(faqs[num].classList[2] == "hidden"){
+    faqs[num].classList.remove('hidden')
+}
+else{
+    faqs[num].classList.add('hidden')
+}
+}
 
-// Array.from(plusArray).forEach((btn, index) => {
-//   btn.classList.add(index)
-//   btn.addEventListener("click", openSesame)
-// });
 
 
-// What am i going to do right now????? 
-// 1. i need to access the button of the div
-// 2. once the button is click then i need to hide/open the text box.
+Array.from(plusArray).forEach((plusBtn, index) =>{
+    plusBtn.classList.add(index,)
+    plusBtn.addEventListener('click', function(e){
+    let queryNum = e.target.classList[1]
+
+    openFaqs(queryNum)
+})
+})
